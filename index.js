@@ -46,11 +46,11 @@ const instructors = [
   }
 ];
 
-const disponibleWkend = instructors.filter(instructor => instructor.specialities.includes("Javascript") && (instructor.availability === "all" || instructor.availability === "weekend"));
-console.log(disponibleWkend);
-disponibleWkend.forEach(instructors => {console.log("Hi nameOfInstructor, we inform you that this weekend you will be doing the support class")};
-const disponibleWkend = instructors.filter(instructor => instructor.specialities.includes("Javascript") && (instructor.availability === "all" || instructor.availability === "weekend"));
-console.log(disponibleWkend);
-disponibleWkend.forEach(instructors => {console.log(`Hi ${instructors.name}, we inform you that this weekend you will be doing the support class`);});
 
+const disponibleWkend = instructors.filter(instructor => instructor.specialities.includes("Javascript") && (instructor.availability === "all" || instructor.availability === "weekend"));
+console.log(disponibleWkend);
+disponibleWkend.forEach(instructor => {
+if ( instructor.specialities.includes("Python")) {
+    console.log(`Hi ${instructor.name}, we inform you that this weekend you will be doing the support class and you need to prepare a Python workshop`);}
+else {console.log(`Hi ${instructor.name}, we inform you that this weekend you will be doing the support class`);}});
 
